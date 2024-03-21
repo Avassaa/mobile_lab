@@ -35,9 +35,11 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     GreetingText(
-                        message = "Happy Birthday Baha!",
-                        from = "from İrem",
-                        modifier=Modifier.padding(8.dp))
+                        message = "Happy Birthday Sam!",
+                        from = "From Emma",
+                        modifier = Modifier.padding(8.dp)
+                    )
+
                 }
             }
         }
@@ -65,11 +67,7 @@ fun GreetingText(message:String,from:String,modifier:Modifier=Modifier){
             modifier=modifier
                 .padding(16.dp)
                 .align(Alignment.End)
-            //verticalArrangement ise kendi childlarının kendi içindeki dikey konumunu ayarlıyor
-            //textAlign sadece texti taşır , fillmaxwidth ile kombolayınca kutuyu büyütüp sağa taşıyor
-            //text align texti kendi layoutu içinde taşıyor
-        //modifier.align ise kutuyu direkt taşıyor (bütün composable'yi parenti içinde)
-            //modifieri parametre olarak verince
+         
         )
     }
 }
@@ -80,6 +78,6 @@ fun GreetingText(message:String,from:String,modifier:Modifier=Modifier){
 @Composable
 fun BirthdayCardPreview() {
     BirthdayCardTheme {
-        GreetingText(message = "Happy Birthday Baha!", from = "from İrem")
+        GreetingText(message = "Happy Birthday Sam!", from = "From Emma")
     }
 }
